@@ -7,7 +7,7 @@ This repository shall contain the implementation of a simple program which gener
 
 - Clone the repository:  git clone https://github.com/AmrElgharieb/pgmApp.git  
 - Compile the code:      g++  main.cpp  pgm.cpp -o pgm_app -Wall  
-- Run the app:           pgm_app.exe FULL\\PATH\\TO\\THE\\INPUT\\FIles     (e.g. pgm_app.exe E:\\work\\InputFiles)
+- Run the app:           pgm_app.exe full\\path\\to\\the\\input\\files     (e.g. pgm_app.exe E:\\work\\InputFiles)
 
 
 2- Using docker
