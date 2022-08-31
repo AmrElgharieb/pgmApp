@@ -1,5 +1,6 @@
+#include <fstream>
 #include <sstream>
-#include <sstream>
+#include <iostream>  // to be removed
 
 #pragma once
 class pgm
@@ -8,19 +9,24 @@ class pgm
 		int Width;
 		int Height;
 		int MaxValue;
-		int MagicNum;
-		int* DataPtr;
+		std::string MagicNum;
+		int** DataPtr;
 	public:
-		pgm(int width, int height);
-		void ReadPgm(std::stringstream ss);
+		pgm(std::string FileName);
+		pgm(int height, int width);
+
+		void WritePgm(std::string FileName);
+
+		pgm operator + (pgm const& obj);
+		~pgm();
 
 		void SetWidth(int Width);
 		void SetHeight(int Height);
 		void SetMaxValue(int MaxValue);
-		void SetMagicNum(int MagicNum);
+		void SetMagicNum(std::string MagicNum);
 
 		int GetWidth(void);
 		int GetHeight(void);
 		int GetMaxValue(void);
-		int GetMagicNum(void);
+		std::string GetMagicNum(void);
 };
