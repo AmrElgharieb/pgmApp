@@ -1,32 +1,40 @@
+/* ************************************************************************** */
+/* ************************ HEADER FILES INCLUDES **************************  */
+/* ************************************************************************** */
 #include <fstream>
 #include <sstream>
-#include <iostream>  // to be removed
-
+#include <cmath>
+/***************************************************************************/
 #pragma once
 class pgm
 {
 	private:
-		int Width;
-		int Height;
-		int MaxValue;
-		std::string MagicNum;
-		int** DataPtr;
+		unsigned int width;
+		unsigned int height;
+		unsigned int maxValue;
+		unsigned int** dataPtr;
+		std::string magicNum;
 	public:
-		pgm(std::string FileName);
-		pgm(int height, int width);
+		void setWidth(unsigned int width);
+		void setHeight(unsigned int height);
+		void setMaxValue(unsigned int maxValue);
+		void setMagicNum(std::string magicNum);
+		unsigned int getWidth(void);
+		unsigned int getHeight(void);
+		unsigned int getMaxValue(void);
+		std::string getMagicNum(void);
 
-		void WritePgm(std::string FileName);
+		pgm();
+		pgm(unsigned int height, unsigned int width);
+
+		void addPgm(pgm* inputPgm);
+
+		void readPgm(std::string fileName);
+		void writePgm(std::string fileName);
 
 		pgm operator + (pgm const& obj);
+		void pgmDivide(const unsigned int divisor);
+
 		~pgm();
-
-		void SetWidth(int Width);
-		void SetHeight(int Height);
-		void SetMaxValue(int MaxValue);
-		void SetMagicNum(std::string MagicNum);
-
-		int GetWidth(void);
-		int GetHeight(void);
-		int GetMaxValue(void);
-		std::string GetMagicNum(void);
 };
+/***************************************************************************/
