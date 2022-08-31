@@ -8,7 +8,7 @@ This repository shall contain the implementation of a simple program which gener
 1- Using the terminal:
 
 - Compile the code:      g++  main.cpp  pgm.cpp -o pgm_app -Wall  
-- Run the app:           pgm_app.exe [full\\path\\to\\the\\input\\files]     (e.g. pgm_app.exe E:\\work\\InputFiles)
+- Run the app:           pgm_app.exe [full\\\path\\\to\\\the\\\input\\\files]     (e.g. pgm_app.exe E:\\\work\\\InputFiles)
 
 
 2- Using docker
