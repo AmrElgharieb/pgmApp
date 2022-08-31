@@ -13,7 +13,7 @@ This repository shall contain the implementation of a simple program which gener
 2- Using docker
 
 - Build the docker image:   docker build . -t pgm_app:1.0
-- Run the created image:    docker run -v FULL/PATH/TO/THE/INPUT/FILES:/usr/source/pgm_app/files pgm_app:1.0
-- Save the generated file: 	docker cp CONTAINER_ID:/usr/source/pgm_app/files/average.pgm  FULL/PATH/TO/THE/INPUT/FILES
+- Run the created image:    docker run -v [full/path/to/the/input/files]:/usr/source/pgm_app/files pgm_app:1.0
+- Save the generated file: 	docker cp container_id:/usr/source/pgm_app/files/average.pgm  [full/path/to/the/input/files]
 
 - To get the container Id used : docker ps -a 
